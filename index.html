@@ -272,15 +272,8 @@
   </footer>
 
   <script>
-    /* ============================================================
-       CONFIGURAÇÃO OBRIGATÓRIA ANTES DE PUBLICAR
-       1. CHECKOUT_URL_17_EUR: URL real do checkout com o preço de 17 €.
-       2. DECLINE_URL: destino real quando a cliente recusa esta oferta.
-       Não inserir aqui URLs inventados. Os parâmetros UTM da página
-       serão preservados quando ainda não existirem no URL de destino.
-       ============================================================ */
-    const CHECKOUT_URL_17_EUR = ''; // Ex.: URL real disponibilizado pela plataforma de pagamento
-    const DECLINE_URL = '';         // Ex.: destino definido para continuar o funil
+    const CHECKOUT_URL_17_EUR = 'https://pay.hotmart.com/K108029400Y?off=2lnqi6ae';
+    const DECLINE_URL = '';
 
     const mockup = document.getElementById('productMockup');
     const mockupPlaceholder = document.getElementById('mockupPlaceholder');
@@ -315,9 +308,7 @@
       if (!destination || !/^https?:\/\//i.test(destination)) {
         event.preventDefault();
         configWarning.classList.add('visible');
-        configWarning.textContent = label === 'checkout'
-          ? 'Configuração pendente: insere CHECKOUT_URL_17_EUR com o URL real do checkout de 17 € antes de publicar. O botão foi mantido sem destino para evitar encaminhamentos incorretos.'
-          : 'Configuração pendente: insere DECLINE_URL com o destino real de recusa/continuação do funil antes de publicar.';
+        configWarning.textContent = label === 'https://pay.hotmart.com/K108029400Y?off=2lnqi6ae'
         configWarning.scrollIntoView({ behavior: 'smooth', block: 'center' });
         return;
       }
@@ -326,7 +317,7 @@
     }
 
     acceptOffer.addEventListener('click', function (event) {
-      navigateIfConfigured(event, CHECKOUT_URL_17_EUR, 'checkout');
+      navigateIfConfigured(event, CHECKOUT_URL_17_EUR, 'https://pay.hotmart.com/K108029400Y?off=2lnqi6ae');
     });
 
     declineOffer.addEventListener('click', function (event) {
