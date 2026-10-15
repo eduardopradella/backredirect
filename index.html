@@ -244,28 +244,29 @@
         </div>
         <div class="saving">Poupa €12 em relação ao preço anterior</div>
       </div>
+<!-- HOTMART - Sales Funnel Widget -->
+<!--- sales funnel container --->
+<div id="hotmart-sales-funnel"></div>
 
-      <a id="acceptOffer" class="cta" href="https://pay.hotmart.com/K108029400Y?off=2lnqi6ae">SIM, QUERO APROVEITAR</a>
+<!--- script load and setup --->
+<script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script>
+<script>
+checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel')
+</script>
+<!-- HOTMART - Sales Funnel Widget -->
       <div class="secure-note">
         <span>🔒 Checkout seguro</span>
         <span>•</span>
         <span>Produto digital</span>
       </div>
     </section>
-
-    <div class="decline-wrap">
-      <a id="declineOffer" class="decline" href="https://obrigadopage.vercel.app/">NÃO QUERO IMPULSIONAR OS MEUS RESULTADOS>
-    </div>
-
     <div class="reassurance">
       <span class="shield" aria-hidden="true">◇</span>
-      <span>Esta é uma oferta complementar e opcional. A decisão de não a adicionar não altera a compra do Xô Bigode Chinês que já realizaste.</span>
     </div>
   </main>
 
   <footer class="wrap">
     <p>© <span id="year">2026</span> — Todos os direitos reservados.</p>
-    <p>Confirma as condições da oferta, a política de privacidade e os dados de contacto da entidade vendedora antes de publicar.</p>
   </footer>
 
   <script>
